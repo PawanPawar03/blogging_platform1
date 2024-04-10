@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu-bar">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
+            </ul>
+        </nav>
+
+        <h1>Welcome to Your Blog</h1>
+        <a href="#" class="content-link"> <!-- Add a class for styling -->
+            <p>Start writing amazing content!
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                  <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                  <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                </svg>
+               
+                <main>
+                    <article class="post">
+                        <h2>Title of Post 1</h2>
+                        <p>This is the content of Post 1.</p>
+                        <div class="social-icons">
+                            <a href="#" class="icon"><i class="fas fa-thumbs-up"></i> Like</a>
+                            <a href="#" class="icon"><i class="fas fa-comment"></i> Comment</a>
+                            <a href="#" class="icon"><i class="fas fa-share"></i> Share</a>
+                          </div>
+                    </article>
+            
+                    <article class="post">
+                        <h2>Title of Post 2</h2>
+                        <p>This is the content of Post 2.</p>
+                        <div class="social-icons">
+                            <a href="#" class="icon"><i class="fas fa-thumbs-up"></i> Like</a>
+                            <a href="#" class="icon"><i class="fas fa-comment"></i> Comment</a>
+                            <a href="#" class="icon"><i class="fas fa-share"></i> Share</a>
+                          </div>
+                    </article>
+            
+                    <article class="post">
+                        <h2>Title of Post 3</h2>
+                        <p>This is the content of Post 3.</p>
+                        <div class="social-icons">
+                            <a href="#" class="icon"><i class="fas fa-thumbs-up"></i> Like</a>
+                            <a href="#" class="icon"><i class="fas fa-comment"></i> Comment</a>
+                            <a href="#" class="icon"><i class="fas fa-share"></i> Share</a>
+                          </div>
+                    </article>
+            
+                    <article class="post">
+                        <h2>Title of Post 4</h2>
+                        <p>This is the content of Post 4.</p>
+                        <div class="social-icons">
+                            <a href="#" class="icon"><i class="fas fa-thumbs-up"></i> Like</a>
+                            <a href="#" class="icon"><i class="fas fa-comment"></i> Comment</a>
+                            <a href="#" class="icon"><i class="fas fa-share"></i> Share</a>
+                          </div>
+                    </article>
+            
+                    <article class="post">
+                        <h2>Title of Post 5</h2>
+                        <p>This is the content of Post 5.</p>
+                        <div class="social-icons">
+                            <a href="#" class="icon"><i class="fas fa-thumbs-up"></i> Like</a>
+                            <a href="#" class="icon"><i class="fas fa-comment"></i> Comment</a>
+                            <a href="#" class="icon"><i class="fas fa-share"></i> Share</a>
+                          </div>
+                    </article>
+                </main>
+            
+
+        <p>&copy; 2024 Your Blog</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body> 
+    <body class="loggedin">
+        <nav class="navtop">
+            <div>
+                <h1>Wellcome to Bolg Home Page</h1>
+                 <a href="{{ url_for('home') }}"><i class="fa fa-home"></i>Home</a>
+    
+                <a href="{{ url_for('logout') }}"><i class="fa fa-sign-out"></i>Logout</a> 
+                <ul class="fa fa-home">
+                    <li><a href="{{ url_for('home') }}"><i class="fa fa-home">Home</i></a></li>
+                    <li><a href="{{ url_for('all_posts') }}"><i>View All Blogs </i></a></li>
+                    <li><a href="{{ url_for('add_post') }}"><i class="fa fa-home">Add New Blogs</i></a></li>
+                     <li><a href="{{ url_for('register') }}"><i>Register </i></a></li> 
+                    <li><a href="{{ url_for('logout') }}"><i class="fa fa-sign-out">Logout</i></a></li>
+                </ul>
+            </div>
+        </nav>
+
+      <div style=" color:palegreen left; text-align:right;font-weight: bolder;"">
+        <ul>
+            <li><a href="{{ url_for('all_posts') }}">View All Posts</a></li>
+            <li><a href="{{ url_for('add_post') }}">Add New Post</a></li>
+        </ul>
+    </div> -->
+        <!-- <ul>
+            {% for post in posts %}
+            <li>
+                <h2><a href="{{ url_for('post_detail',id = post.id) }}">{{post.title}}</a></h2>
+                <p>{{post.content[:100]}}...</p>
+            </li>
+            {% endfor %}
+        </ul> -->
+
+        <!-- {% extends 'layout.html' %}
+
+        {% block title %}Home{% endblock %}
+        
+        {% block content %}
+        <h2>Welcome to my Blog</h2>
+        <p style="color: black;">Welcome back, {{ username }}!. Check out more exciting articles on Python Programming Language.</p>
+        <p style="background-color: aqua;text-align: center;font-weight: bolder;"><a href="https://dev.to/phylis/python-101-introduction-to-python-2eh4">Introduction to Python</a></p>
+        <p style="background-color: aqua; text-align: center;font-weight: bolder;"><a href="https://dev.to/phylis/introduction-to-control-flow-and-functions-in-python-41cc">Python Functions and Control Flow</a></p>
+        <p style="background-color: aqua; text-align: center; font-weight: bolder;"><a href="https://dev.to/phylis/python-classes-and-objects-51on">Python Classes and Objects</a></p>
+        
+        
+        {% endblock %} 
+        
+        
+</body>
+</html> -->

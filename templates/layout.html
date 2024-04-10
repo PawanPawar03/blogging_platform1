@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body class="loggedin">
+    <nav class="navtop">
+        <div>
+            <h1>@Phy Blog</h1>
+            <a href="{{ url_for('home') }}"><i class="fa fa-home"></i>Home</a>
+
+            <a href="{{ url_for('logout') }}"><i class="fa fa-sign-out"></i>Logout</a>
+        </div>
+    </nav>
+    <a href="{{ url_for('home') }}">Back to Home</a>
+
+</body>
+</html>

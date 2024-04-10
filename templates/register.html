@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="register">
+        <h1>Register</h1>
+        <div class="links">
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}" class="active">Register</a>
+        </div>
+        <form action="{{ url_for('register') }}" method="post" autocomplete="off">
+            <label for="username">
+                <i class="fa fa-user"></i>
+            </label> <br>
+            <input type="text" name="username" placeholder="Username" id="username" required>
+            <label for="password"> <br>
+                <i class="fa fa-lock"></i>
+            </label> <br>
+            <input type="password" name="password" placeholder="Password" id="password" required> <br>
+            <label for="email">
+                <i class="fa fa-envelope-open"></i>
+            </label> <br>
+            <input type="email" name="email" placeholder="Email" id="email" required>
+            <br>
+            <div class="msg">{{ msg }}</div> <br>
+            <input type="submit" value="Register">
+        </form>
+        <a href="{{ url_for('home') }}">Back to Home</a>
+    </div>
+</body>
+</html>
